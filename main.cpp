@@ -7,11 +7,14 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Widget w;
-    w.resize(320, 240);
+    QLabel *label = new QLabel("Name:");
+    QLineEdit *lineEdit = new QLineEdit();
+
+    QHBoxLayout *layout = new QHBoxLayout();
+    layout->addWidget(label);
+    layout->addWidget(lineEdit);
+    w.setLayout(layout);
+    w.setWindowTitle("Window layout");
     w.show();
-    w.setWindowTitle("Child widget");
-    QPushButton *button = new QPushButton("Press me", &w);
-    button->move(100, 100);
-    button->show();
     return a.exec();
 }
