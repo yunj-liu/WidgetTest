@@ -1,6 +1,7 @@
 ﻿#include "widget.h"
 
 #include <QApplication>
+#include <QtWidgets>
 
 int main(int argc, char *argv[])
 {
@@ -8,9 +9,9 @@ int main(int argc, char *argv[])
     Widget w;
     w.resize(320, 240);
     w.show();
-    //w.setWindowTitle(
-    //    QApplication::translate("toplevel", "Top-level widget"));
-    // QT_VERSION_MAJOR in the qconfig.h
-    w.setWindowTitle(QString::number(QT_VERSION_MAJOR)+ "-" + QT_VERSION_STR);
+    w.setWindowTitle("Child widget");
+    QPushButton *button = new QPushButton("Press me", &w);
+    button->move(100, 100);
+    button->show();
     return a.exec();
 }
