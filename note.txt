@@ -1,0 +1,1 @@
+Base class choose QWidget, and not check the checkbox of Generate form. Kit select MSVC2019.
