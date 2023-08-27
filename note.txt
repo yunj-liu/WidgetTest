@@ -1,1 +1,8 @@
 Base class choose QWidget, and not check the checkbox of Generate form. Kit select MSVC2019.
+
+Just as widgets can contain other widgets, layouts can be used to provide different levels of grouping for widgets. 
+Here, we want to display a label alongside a line edit at the top of a window, 
+above a table view showing the results of a query.
+
+We achieve this by creating two layouts: queryLayout is a QHBoxLayout that contains QLabel and QLineEdit widgets placed side-by-side; 
+mainLayout is a QVBoxLayout that contains queryLayout and a QTableView arranged vertically.
